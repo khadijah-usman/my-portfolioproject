@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Portfolio Website</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link to Boxicons for icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Header section with navigation menu -->
     <header class="header">
         <a href="#home" class="logo">Khadijah <span>Usman</span></a>
         <i class='bx bx-menu' id="menu-icon"></i>
@@ -21,6 +24,7 @@
         </nav>
     </header>
 
+    <!-- Home section with introductory content -->
     <section class="home" id="home">
         <div class="home-content">
             <h1>Hi, It's <span>Khadijah</span></h1>
@@ -50,6 +54,7 @@
         </div>
     </section>
 
+    <!-- About Me section with personal information and education -->
     <section class="aboutme" id="aboutme">
         <h2>About Me</h2>
         <div class="about-content">
@@ -78,29 +83,30 @@
         </div>
     </section>
     
+    <!-- Projects section showcasing various projects -->
     <section class="projects" id="projects">
         <h2 class="heading">Projects</h2>
-        <div class="services-container">
-            <div class="service-box"> 
-                <div class="service-info">
+        <div class="project-container">
+            <div class="project-box"> 
+                <div class="project-info">
                     <h4>Smart Fish Tank System with Arduino Technology:</h4>
                     <p>Developed an advanced IoT-based smart fish tank system using Arduino, featuring real-time monitoring of key environmental parameters like pH and water temperature to maintain optimal aquatic conditions. The system also includes adaptive lighting and an automated fish feeder, emphasizing automation, user convenience, and environmental sustainability.</p>
                 </div>
             </div>
-            <div class="service-box"> 
-                <div class="service-info">
+            <div class="project-box"> 
+                <div class="project-info">
                     <h4>Online Book Store Website:</h4>
                     <p>Designed and built a static website for an online bookstore, showcasing expertise in front-end development using HTML, CSS, and XML. Implemented effective data management using XML, demonstrating skills in web design and structured data handling.</p>
                 </div>
             </div>
-            <div class="service-box"> 
-                <div class="service-info">
+            <div class="project-box"> 
+                <div class="project-info">
                     <h4>Java Password Generator:</h4>
                     <p>Developed a Java application for password generation, leveraging JavaFX for an intuitive graphical user interface (GUI). Delivered a comprehensive report detailing implementation strategies and features, highlighting technical proficiency and project management skills.</p>
                 </div>
             </div>
-            <div class="service-box"> 
-                <div class="service-info">
+            <div class="project-box"> 
+                <div class="project-info">
                     <h4>C Programming Dice Rolling Simulator:</h4>
                     <p>Developed a robust C program for simulating dice rolls, including input validation and result analysis for user feedback and accuracy. Demonstrated problem-solving skills, algorithmic thinking, and proficiency in programming fundamentals.</p>
                 </div>
@@ -108,78 +114,96 @@
         </div>
     </section>
    
+    <!-- Skills section highlighting technical skills -->
     <section class="skills" id="skills">
         <div class="skills-box">
             <h2 class="heading">Skills</h2>
             <div class="wrapper">
                 <div class="skills-item">
-                    <img src="number 1.png" alt="">
+                    <img src="number 1.png" alt="Programming Languages">
                     <h2>Programming Languages</h2>
-                    <div class="rating"></div>
-                    <i class='bx bxs-star' id="star"></i>
-                    <i class='bx bxs-star' id="star"></i>
-                    <i class='bx bxs-star' id="star"></i>
-                    <i class='bx bxs-star' id="star"></i>
-                    <i class='bx bxs-star' id="star"></i>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>Proficient in Python, Java, and C++ for developing robust and scalable applications.</p>
                 </div>
                 <div class="skills-item">
-                    <img src="number 2.png" alt="">
+                    <img src="number 2.png" alt="Web Development">
                     <h2>Web Development</h2>
-                    <div class="rating"></div>
-                    <i class='bx bxs-star' id="star"></i>
-                    <i class='bx bxs-star' id="star"></i>
-                    <i class='bx bxs-star' id="star"></i>
-                    <i class='bx bxs-star' id="star"></i>
-                    <i class='bx bxs-star' id="star"></i>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>Skilled in HTML, CSS, JavaScript, and HTML 5.0, with hands-on experience in creating responsive and user-friendly web interfaces.</p>
                 </div>
                 <div class="skills-item">
-                    <img src="number 3.png" alt="">
+                    <img src="number 3.png" alt="Database Management">
                     <h2>Database Management</h2>
-                    <div class="rating"></div>
-                    <i class='bx bxs-star' id="star"></i>
-                    <i class='bx bxs-star' id="star"></i>
-                    <i class='bx bxs-star' id="star"></i>
-                    <i class='bx bxs-star' id="star"></i>
-                    <i class='bx bxs-star' id="star"></i>
+                    <div class="rating">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
                     <p>Expertise in SQL and MySQL, including effective use of normalization techniques for designing efficient relational databases.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact section with a form for getting in touch -->
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
         <form action="">
             <div class="input-group">
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
                 </div>
                 <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="tel" placeholder="Phone Number" required>
+                    <input type="text" placeholder="Subject" required>
                 </div>
             </div>
             <div class="input-group-2">
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
             </div>
         </form>
     </section>
 
+    <!-- Footer Section -->
     <footer class="footer">
+        <!-- Social media links -->
+        <div class="socials">
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-github'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+        </div>
+        <!-- Footer navigation links -->
         <ul class="footer-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <p>&copy; 2024 Khadijah Usman. All Rights Reserved.</p>
+        <!-- Copyright information -->
+        <div class="copyright">
+            <p>&copy; 2024 Khadijah Usman. All rights reserved.</p>
+        </div>
     </footer>
 
+    <!-- External JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>

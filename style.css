@@ -2,15 +2,16 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
     text-decoration: none;
     border: none;
     outline: none;
-    scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    font-family: "Poppins", sans-serif; /* Default font for all elements */
 }
 
 :root {
+    /* Define custom properties (CSS variables) for colors */
     --bg-color: #f8f0f8; /* Light pink background */
     --second-bg-color: #f0e0f0; /* Slightly darker pink for contrast */
     --text-color: #333; /* Darker text color for readability */
@@ -18,551 +19,618 @@
 }
 
 html {
-    font-size: 60%;
-    overflow-x: hidden;
+    font-size: 60%; /* Base font size for rem units */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 body {
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: var(--bg-color); /* Set body background color */
+    color: var(--text-color); /* Set body text color */
 }
 
+/* Header styles */
 .header {
-    position: fixed;
+    position: fixed; /* Fixed position for sticky header */
     top: 0;
     left: 0;
-    width: 100%;
-    padding: 2rem 12%;
+    width: 100%; /* Full-width header */
+    padding: 2rem 12%; /* Padding for header */
     background: rgba(255, 105, 180, 0.3); /* Light pink with transparency */
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 5;
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    z-index: 5; /* Ensure it is above other elements */
 }
 
+/* Logo styles */
 .logo {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.3s ease;
+    font-size: 2.5rem; /* Logo font size */
+    color: var(--text-color); /* Logo text color */
+    font-weight: 800; /* Bold font weight */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Scale logo on hover */
 }
 
 .logo span {
-    text-shadow: 0 0 25px var(--main-color);
+    text-shadow: 0 0 25px var(--main-color); /* Shadow effect for logo span */
 }
 
+/* Navigation links */
 .navbar a {
-    font-size: 1.6rem;
-    color: var(--text-color);
-    margin-left: 2rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
+    font-size: 1.6rem; /* Font size for links */
+    color: var(--text-color); /* Link text color */
+    margin-left: 2rem; /* Space between links */
+    font-weight: 500; /* Medium font weight */
+    transition: 0.3s ease; /* Transition for hover effect */
+    border-bottom: 3px solid transparent; /* Bottom border for link */
 }
 
 .navbar a:hover,
 .navbar a:active {
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+    color: var(--main-color); /* Change color on hover/active */
+    border-bottom: 3px solid var(--main-color); /* Bottom border on hover */
 }
 
+/* Menu icon styles */
 #menu-icon {
-    font-size: 3rem;
-    color: var(--main-color);
-    display: none;
+    font-size: 3rem; /* Size for menu icon */
+    color: var(--main-color); /* Color for menu icon */
+    display: none; /* Hide by default */
 }
 
+/* Main heading styles */
 .heading {
-    font-size: 8rem;
-    text-align: center;
-    margin: 5rem 0;
+    font-size: 8rem; /* Size of main heading */
+    text-align: center; /* Center alignment */
+    margin: 5rem 0; /* Margin above and below heading */
 }
 
+/* About me section styles */
 .aboutme {
-    padding: 5rem 12%;
-    background: var(--second-bg-color);
+    padding: 5rem 12%; /* Padding for about me section */
+    background: var(--second-bg-color); /* Background color */
 }
 
 .aboutme h2 {
-    font-size: 50px;
-    color: var(--main-color);
-    text-align: center;
-    margin-bottom: 2rem;
+    font-size: 50px; /* Size of section title */
+    color: var(--main-color); /* Title color */
+    text-align: center; /* Center alignment */
+    margin-bottom: 2rem; /* Space below the title */
 }
 
+/* About content styles */
 .about-content {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px; /* Max width for content */
+    margin: 0 auto; /* Center content */
 }
 
 .about-content h3 {
-    font-size: 2.5rem;
-    color: var(--main-color);
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Size for about content subheading */
+    color: var(--main-color); /* Subheading color */
+    margin-bottom: 1rem; /* Space below subheading */
 }
 
 .about-content p {
-    font-size: 1.6rem;
-    line-height: 1.8;
-    margin-bottom: 3rem;
+    font-size: 1.6rem; /* Size of paragraph text */
+    line-height: 1.8; /* Line height for readability */
+    margin-bottom: 3rem; /* Space below paragraph */
 }
 
-/* Timeline */
+/* Timeline styles */
 .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 5rem auto; /* Added margin to separate from other sections */
-    padding: 0 20px;
-    background: var(--second-bg-color);
-    border-radius: 2rem;
-    padding: 50px 0;
-    box-shadow: 0 0 25px var(--main-color);
+    position: relative; /* Position for timeline items */
+    max-width: 1200px; /* Max width for timeline */
+    margin: 5rem auto; /* Center alignment with margin */
+    padding: 0 20px; /* Padding on sides */
+    background: var(--second-bg-color); /* Background color */
+    border-radius: 2rem; /* Rounded corners */
+    padding: 50px 0; /* Padding above and below */
+    box-shadow: 0 0 25px var(--main-color); /* Shadow effect */
 }
 
 .timeline-item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    margin-bottom: 50px;
-    padding-left: 40px; /* Add padding to align content with the dot */
+    display: flex; /* Flexbox for layout */
+    justify-content: flex-start; /* Align items to start */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Relative positioning */
+    margin-bottom: 50px; /* Space below each item */
+    padding-left: 40px; /* Padding on left */
 }
 
 .timeline-item:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0; /* Remove margin for last item */
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
-    flex-direction: row;
-    border-radius: 2rem 0 0 2rem;
+    flex-direction: row; /* Default order for odd items */
+    border-radius: 2rem 0 0 2rem; 
 }
 
 .timeline-item:nth-child(even) .timeline-content {
-    flex-direction: row-reverse;
-    border-radius: 0 2rem 2rem 0;
+    flex-direction: row-reverse; /* Reverse order for even items */
+    border-radius: 0 2rem 2rem 0; /* Rounded corners for even items */
 }
 
 .timeline-item::before {
-    content: "";
+    content: ""; /* Empty content for pseudo-element */
     position: absolute;
-    width: 2px;
-    background-color: var(--main-color);
-    top: 0;
-    bottom: 0;
-    left: 20px; /* Align with the dots */
+    width: 2px; /* Width of the timeline line */
+    background-color: var(--main-color); /* Line color */
+    top: 0; /* Align to top */
+    bottom: 0; /* Align to bottom */
+    left: 20px; /* Left indent */
 }
 
 .timeline-dot {
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background-color: var(--main-color);
-    border-radius: 50%;
-    left: 10px; /* Align the dot to the left side of the timeline */
-    top: 0;
-    transform: translateY(-50%);
-    z-index: 1;
-    box-shadow: 0 0 25px var(--main-color);
+    position: absolute; /* Absolute positioning */
+    height: 20px; /* Height of dot */
+    width: 20px; /* Width of dot */
+    background-color: var(--main-color); /* Dot color */
+    border-radius: 50%; /* Circular dot */
+    left: 10px; /* Left indent */
+    top: 0; /* Align to top */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 1; /* Layering above timeline line */
+    box-shadow: 0 0 25px var(--main-color); /* Drop shadow */
 }
 
 .timeline-content {
-    padding: 20px;
-    background: var(--bg-color);
-    border-radius: 2rem;
-    width: calc(100% - 40px); /* Adjust width to account for padding */
-    box-shadow: 0 0 25px var(--main-color);
-    position: relative;
+    padding: 20px; /* Padding inside content */
+    background: var(--bg-color); /* Background color */
+    border-radius: 2rem; /* Rounded corners */
+    width: calc(100% - 40px); /* Adjust width to fit */
+    box-shadow: 0 0 25px var(--main-color); /* Shadow effect for content */
+    position: relative; /* Relative position for stacking */
 }
 
 .timeline-content h4 {
-    font-size: 1.8rem;
-    color: var(--main-color);
-    margin-bottom: 1rem;
+    font-size: 1.8rem; /* Size for subheading in timeline */
+    color: var(--main-color); /* Color for subheading */
+    margin-bottom: 1rem; /* Space below subheading */
 }
 
 .timeline-content p {
-    font-size: 1.4rem;
-    line-height: 1.6;
+    font-size: 1.4rem; /* Size for timeline paragraph */
+    line-height: 1.6; /* Line height for readability */
 }
 
 /* Home section styles */
 section {
-    min-height: 100vh;
-    padding: 10rem 12%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row; /* Align content horizontally */
+    min-height: 100vh; /* Minimum height of section */
+    padding: 10rem 12%; /* Padding for section */
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    flex-direction: row; /* Horizontal layout */
 }
 
 .home-content {
-    max-width: 600px;
-    text-align: left; /* Left align the content */
+    max-width: 600px; /* Max width for home content */
+    text-align: left; /* Align text to left */
 }
 
 span {
-    color: var(--main-color);
+    color: var(--main-color); /* Color for text inside span elements */
 }
 
 .home-content h3 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
+    margin: 1rem 0; /* Margin for heading */
+    font-size: 2.5rem; /* Size for h3 element */
 }
 
 .home-content h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    font-size: 4rem; /* Size for main heading */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 1rem; /* Space below heading */
+    line-height: 1.2; /* Line height for readability */
 }
 
 .home-image {
-    position: relative;
-    width: 32vw; /* Adjust width to fit the design */
-    text-align: right; /* Right align the image container */
+    position: relative; /* Positioning for image container */
+    width: 32vw; /* Width of image container */
+    text-align: right; /* Align text to right */
 }
 
 .home-image img {
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
+    width: 100%; /* Full width of image */
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 0 25px var(--main-color); /* Shadow effect */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 0.4s ease-in-out; /* Smooth transition for hover effect */
 }
 
 .home-image img:hover {
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color),
-                0 0 100px var(--main-color);
+                0 0 100px var(--main-color); /* Enhanced shadow on hover */
 }
 
 .home-content p {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.8;
-    max-width: 1000px;
+    font-size: 1.5rem; /* Paragraph font size */
+    font-weight: 500; /* Medium weight for text */
+    line-height: 1.8; /* Line height for readability */
+    max-width: 1000px; /* Max width for paragraph */
 }
 
+/* Social media icons styles */
 .social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    background: transparent;
-    border: 2px solid var(--main-color);
-    font-size: 2.5rem;
-    border-radius: 50%;
-    color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s ease-in-out;
+    display: inline-flex; /* Align icon in a flex container */
+    justify-content: center; /* Center items */
+    align-items: center; /* Center items vertically */
+    width: 4.5rem; /* Width of icon button */
+    height: 4.5rem; /* Height of icon button */
+    background: transparent; /* Transparent background */
+    border: 2px solid var(--main-color); /* Border color */
+    font-size: 2.5rem; /* Font size for social icons */
+    border-radius: 50%; /* Circular button */
+    color: var(--main-color); /* Icon color */
+    margin: 3rem 1.5rem 3rem 0; /* Margin around icons */
+    transition: 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 
 .social-icons a:hover {
-    color: var(--text-color);
-    transform: scale(1.3) translateY(-5px);
-    box-shadow: 0 0 25px var(--main-color);
-    background-color: var(--main-color);
+    color: var(--text-color); /* Change icon color on hover */
+    transform: scale(1.3) translateY(-5px); /* Scale and slightly move up */
+    box-shadow: 0 0 25px var(--main-color); /* Add shadow on hover */
+    background-color: var(--main-color); /* Background color on hover */
 }
 
+/* Button group styles */
 .btn-group {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+    display: flex; /* Flexbox layout for buttons */
+    align-items: center; /* Center items vertically */
+    gap: 1.5rem; /* Space between buttons */
 }
 
 .btn {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--main-color);
-    box-shadow: 0 0 25px var(--main-color);
-    border-radius: 4rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
-    border: 2px solid transparent;
-    letter-spacing: 0.1rem;
-    font-weight: 600;
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
+    display: inline-block; /* Inline block for button styling */
+    padding: 1rem 2.8rem; /* Padding for button */
+    background: var(--main-color); /* Button background color */
+    box-shadow: 0 0 25px var(--main-color); /* Shadow effect */
+    border-radius: 4rem; /* Rounded corners */
+    font-size: 1.6rem; /* Font size for button text */
+    color: var(--text-color); /* Button text color */
+    border: 2px solid transparent; /* Transparent border by default */
+    letter-spacing: 0.1rem; /* Increased letter spacing */
+    font-weight: 600; /* Bold font weight */
+    transition: 0.3s ease-in-out; /* Smooth transition for hover */
+    cursor: pointer; /* Pointer cursor */
 }
 
 .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 50px var(--main-color);
+    transform: scale(1.05); /* Slight scale on hover */
+    box-shadow: 0 0 50px var(--main-color); /* Enhanced shadow on hover */
 }
 
 .btn-group a:nth-of-type(2) {
-    background-color: var(--main-color);
-    color: var(--text-color); /* Consistent text color */
-    border: 2px solid var(--main-color);
-    box-shadow: 0 0 25px transparent;
+    background-color: var(--main-color); /* Second button background color */
+    color: var(--text-color); /* Second button text color */
+    border: 2px solid var(--main-color); /* Border color */
+    box-shadow: 0 0 25px transparent; /* Transparent shadow */
 }
 
+/* Text animation styles */
 .text-animation {
-    font-size: 34px;
-    font-weight: 600;
-    min-width: 280px;
-    display: inline-block; /* Added to properly handle inline animations */
+    font-size: 34px; /* Size for animated text */
+    font-weight: 600; /* Bold font weight */
+    min-width: 280px; /* Minimum width for text container */
+    display: inline-block; /* Inline block for layout */
 }
 
 .text-animation span {
-    position: relative;
+    position: relative; /* Positioning for text span */
 }
 
-.text-animation span::before{
-    content: " Passionate IT Student";
-    color: var(--main-color);
-    animation: words 20s infinite;
+.text-animation span::before {
+    content: " Passionate IT Student"; /* Initial content before the animation */
+    color: var(--main-color); /* Color for animated text */
+    animation: words 20s infinite; /* Infinite animation for words */
 }
 
-.text-animation span::after{
-    content: "";
-    background-color: var(--bg-color);
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid var(--bg-color);
-    right: -8px;
-    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+.text-animation span::after {
+    content: ""; /* Empty content for cursor effect */
+    background-color: var(--bg-color); /* Background color for cursor */
+    position: absolute; /* Absolute positioning */
+    width: calc(100% + 8px); /* Adjust width for cursor */
+    height: 100%; /* Full height */
+    border-left: 3px solid var(--bg-color); /* Border for cursor */
+    right: -8px; /* Positioning to the right */
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite; /* Cursor and typing animation */
 }
 
-@keyframes cursor{
+/* Cursor animation keyframes */
+@keyframes cursor {
     to {
-        border-left: 2px solid var(--main-color);
+        border-left: 2px solid var(--main-color); /* Blink effect for cursor */
     }
 }
 
+/* Text animation keyframes */
 @keyframes words {
-    0%, 
-    20% {
-        content: "Frontend Designer";
+    0%, 20% {
+        content: "Frontend Designer"; /* Initial word */
     }
-    21%, 
-    40% {
-        content: "Web Designer";
+    21%, 40% {
+        content: "Web Designer"; /* Next word */
     }
-    41%, 
-    60% {
-        content: "Skilled Programmer";
+    41%, 60% {
+        content: "Skilled Programmer"; /* Next word */
     }
-    61%, 
-    80% {
-        content: "Determined Individual";
+    61%, 80% {
+        content: "Determined Individual"; /* Next word */
     }
-    81%, 
-    100% {
-        content: "Creative Student";
+    81%, 100% {
+        content: "Creative Student"; /* Last word */
     }
 }
+
+/* Typing animation keyframes */
 @keyframes typing {
-    10%, 
-    15%, 
-    30%,
-    35%, 
-    50%, 
-    55%, 
-    70%,
-    75%,
-    90%,
-    95% {
-        width: 0;
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+        width: 0; /* No width for typing effect */
     }
-    5%,
-    20%, 
-    25%, 
-    40%, 
-    45%, 
-    60%, 
-    65%, 
-    80% {
-        width: calc(100% + 8px);
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80% {
+        width: calc(100% + 8px); /* Full width for typed words */
     }
 }
-.projects{
-    background: var(--bg-color);
-    color: black;
+
+/* Projects section styles */
+.projects {
+    background: var(--bg-color); /* Background color */
+    color: black; /* Text color */
 }
-.projects h2{
-    margin-bottom: 5rem;
-    color: var(--main-color);
+
+.projects h2 {
+    margin-bottom: 5rem; /* Space below title */
+    color: var(--main-color); /* Title color */
 }
-.services-container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
-    gap: 2.5rem;
+
+/* project container styles */
+.project-container {
+    display: grid; /* Grid layout for projects */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    align-items: center; /* Center items vertically */
+    gap: 2.5rem; /* Space between items */
 }
-.service-box{
-    background-color: var(--main-color);
-    height: 410px;
-    border-radius: 3rem;
-    border: 5px solid transparent;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
+
+/* Individual project box styles */
+.project-box {
+    background-color: var(--main-color); /* Background color for project box */
+    height: 410px; /* Fixed height */
+    border-radius: 3rem; /* Rounded corners */
+    border: 5px solid transparent; /* Transparent border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: 0.4s ease-in-out; /* Smooth transition for hover effect */
 }
-.service-box:hover{
-    background: var(--second-bg-color);
-    color: black;
-    border: 5px solid var(--main-color);
-    transform: scale(1.03);
+
+.project-box:hover {
+    background: var(--second-bg-color); /* Change background on hover */
+    color: black; /* Change text color on hover */
+    border: 5px solid var(--main-color); /* Show border on hover */
+    transform: scale(1.03); /* Scale project box */
 }
-.service-box .service-info{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    max-height: 200px;
-    justify-content: left;
-    align-items: baseline;
-    padding: 5rem 5rem;
+
+/* project info styles */
+.project-box .project-info {
+    display: flex; /* Flex layout for project info */
+    flex-direction: column; /* Vertical alignment */
+    text-align: left; /* Align text left */
+    max-height: 200px; /* Max height for content */
+    justify-content: left; /* Align items to left */
+    align-items: baseline; /* Align items along the baseline */
+    padding: 5rem 5rem; /* Padding for content */
 }
-.service-info h4{
-    font-size: 2rem;
+
+/* project info heading styles */
+.project-info h4 {
+    font-size: 2rem; /* Size for project subheading */
     font-weight: 800; /* Bold */
-    line-height: 2;
+    line-height: 2; /* Line height for readability */
 }
-.service-info p{
-    font-size: 1.6rem;
-    font-weight: 400; /* Not bold */
-    max-height: 100px;
-    line-height: 1.7;
-    margin: auto;
+
+.project-info p {
+    font-size: 1.6rem; /* Size for project paragraph */
+    font-weight: 400; /* Normal weight */
+    max-height: 100px; /* Max height for paragraph */
+    line-height: 1.7; /* Line height for readability */
+    margin: auto; /* Center paragraph */
 }
-.skills{
-    background: var(--second-bg-color);
+
+/* Skills section styles */
+.skills {
+    background: var(--second-bg-color); /* Background color for skills section */
 }
-.skills-box{
-    background-size: cover;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-     flex-direction: column;
+
+.skills-box {
+    background-size: cover; /* Cover background */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    flex-direction: column; /* Column layout */
 }
-.skills .heading{
-    margin-bottom: 5rem;
-    color: #ff66b2;
-    
+
+.skills .heading {
+    margin-bottom: 5rem; /* Space below heading */
+    color: #ff66b2; /* Color for heading */
 }
-.skills-box img{
-    width: 15rem;
-    border-radius: 50%;
-    border: 3px solid var(--main-color);
-    box-shadow: 0 0 25px var(--main-color);
+
+/* Skills image styles */
+.skills-box img {
+    width: 15rem; /* Width of skill image */
+    border-radius: 50%; /* Circular image */
+    border: 3px solid var(--main-color); /* Border color */
+    box-shadow: 0 0 25px var(--main-color); /* Shadow effect */
 }
-.wrapper{
-    display: grid;
-    grid-template-columns: repeat (3,1fr);
-    gap: 3em;    
+
+/* Wrapper for skills items */
+.wrapper {
+    display: grid; /* Grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 3em; /* Space between items */
 }
-.skills-item{
-    min-height: 550px;
-    max-width: 450px;   
-    background: var(--bg-color);
-    border: 3px solid rgba(238, 238, 238, 0.2);
-    border-radius: 2rem;
-    margin: 0 2rem;
-    padding: 30px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center;
-    text-align: center;
-    gap: 1.5rem;
-    color: black;
-    transition: 0.4s ease-in-out;
+
+/* Individual skills item styles */
+.skills-item {
+    min-height: 550px; /* Minimum height for skills items */
+    max-width: 450px; /* Max width for skills items */
+    background: var(--bg-color); /* Background color */
+    border: 3px solid rgba(238, 238, 238, 0.2); /* Light border */
+    border-radius: 2rem; /* Rounded corners */
+    margin: 0 2rem; /* Margin on sides */
+    padding: 30px; /* Padding for content */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Vertical alignment */
+    align-items: center; /* Center items */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text */
+    gap: 1.5rem; /* Space between items */
+    color: black; /* Text color */
+    transition: 0.4s ease-in-out; /* Smooth transition for hover */
 }
-.skills-item:hover{
-    border: 3px solid var(--main-color);
-    transform: translateY(-10px)scale(1.03);
-    box-shadow: 0 0 50px var(--main-color);
+
+.skills-item:hover {
+    border: 3px solid var(--main-color); /* Change border color on hover */
+    transform: translateY(-10px) scale(1.03); /* Slightly lift and scale on hover */
+    box-shadow: 0 0 50px var(--main-color); /* Shadow effect on hover */
 }
-.skills-item h2{
-    font-size: 2.8rem;
+
+.skills-item h2 {
+    font-size: 2.8rem; /* Size for skills item heading */
 }
-.skills-item p{
-    font-size: 1.3rem;
+
+.skills-item p {
+    font-size: 1.3rem; /* Size for skills item paragraph */
 }
-#star{
-    color:gold;
-    font-size: 2rem;
+
+/* Star icon styles */
+#star {
+    width: 50px; /* Width of the star */
+    height: 50px; /* Height of the star */
+    background: var(--main-color); /* Background color */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Star shape */
+    display: inline-block; /* Inline-block display */
+    box-shadow: 0 0 15px var(--main-color); /* Shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition r */
 }
-.contact{
-background-color: var(--bg-color); 
+
+/* Contact section styles */
+.contact {
+    background-color: var(--bg-color); /* Background color */
 }
-.conctact h2{
-    margin-bottom: 3rem;
-    color: white;
+
+.contact h2 { 
+    margin-bottom: 3rem; /* Space below title */
+    color: white; /* Title color */
 }
-.contact form{
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    gap: 3rem;
-    margin: 5rem auto; 
-    text-align: center;
+
+/* Contact form styles */
+.contact form {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 3rem; /* Space between form elements */
+    margin: 5rem auto; /* Center form with margin */
+    text-align: center; /* Center text */
 }
-.contact form .input-box{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+
+/* Input box styles */
+.contact form .input-box {
+    display: flex; /* Flex layout for input box */
+    justify-content: center; /* Center items */
+    flex-wrap: wrap; /* Allow items to wrap */
 }
+
+/* Input and textarea styles */
 .contact form .input-box input,
-.contact form textarea{
-    width: 100%;
-    padding: 2.5rem;
-    font-size: 1.8rem;
-    color: var(--text-color);
-    background: var(--second-bg-color);
-    border-radius: 2rem;
-    border: 2px solid var(--main-color);
-    margin: 1.5rem 0;
-    resize: none;
-
+.contact form textarea {
+    width: 100%; /* Full width for input/textarea */
+    padding: 2.5rem; /* Padding for input/textarea */
+    font-size: 1.8rem; /* Font size for input/textarea */
+    color: var(--text-color); /* Text color */
+    background: var(--second-bg-color); /* Background color */
+    border-radius: 2rem; /* Rounded corners */
+    border: 2px solid var(--main-color); /* Border color */
+    margin: 1.5rem 0; /* Vertical margin */
+    resize: none; /* Disable resizing for textarea */
 }
-.contact form .btn{
-    margin-top: 2rem;
+
+/* Button styles in contact form */
+.contact form .btn {
+    margin-top: 2rem; /* Margin above button */
 } 
-.footer{
-    position: relative;
-    bottom: 0; 
-    width: 100%;
-    padding: 40px 0;
-    background-color: var(--second-bg-color);
-}
-footer .social{
-    text-align:center;
-    padding-bottom: 25px;
-    color: var(--main-color);
-}
-.footer .social a{
-    font-size: 25px;
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
-    width: 42px;
-    height: 42px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    margin: 0 10px;
 
+/* Footer styles */
+.footer {
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width */
+    padding: 40px 0; /* Padding for footer */
+    background-color: var(--second-bg-color); /* Background color */
 }
-.footer ul{ 
-    margin-top: 0;
-     padding: 0;
-      font-size: 18px; 
-      line-height: 1.6; 
-      margin-bottom: 0;
-    text-align: center;
-}
-.footer ul li a{
-color:white;
-border-bottom: 3px solid transparent;
-transition: 0.3;
 
+/* Footer social media links */
+.footer .socials {
+    text-align: center; /* Center alignment */
+    padding-bottom: 25px; /* Space below social icons */
+    color: var(--main-color); /* Color for social icons */
+}
+
+.footer .socials a {
+    font-size: 25px; /* Font size for social icons */
+    color: var(--main-color); /* Icon color */
+    border: 2px solid var(--main-color); /* Border color for icons */
+    width: 42px; /* Width for icon button */
+    height: 42px; /* Height for icon button */
+    display: inline-block; /* Inline block for layout */
+    text-align: center; /* Center icons */
+    border-radius: 50%; /* Circular icons */
+    margin: 0 10px; /* Space between icons */
+    transition: 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+.footer .socials a:hover {
+    transform: scale(1.2) translateY(-10px); /* Scale and move on hover */
+    background-color: var(--main-color); /* Background color on hover */
+    color: black; /* Change text color on hover */
+    box-shadow: 0 0 25px var(--main-color); /* Shadow effect on hover */
+}
+
+/* Footer list styles */
+.footer ul { 
+    margin-top: 0; /* Reset top margin */
+    padding: 0; /* Reset padding */
+    font-size: 18px; /* Font size for list items */
+    line-height: 1.6; /* Line height for readability */
+    margin-bottom: 0; /* Reset bottom margin */
+    text-align: center; /* Center alignment */
+}
+
+/* Footer list link styles */
+.footer ul li a {
+    color: white; /* Link color */
+    border-bottom: 3px solid transparent; /* Transparent border by default */
+    transition: 0.3s; /* Smooth transition for hover */
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid var(--main-color); /* Change border on hover */
+}
+
+/* Footer list item styles */
+.footer ul li {
+    display: inline-block; /* Inline block for list items */
+    padding: 0 15px; /* Padding for each list item */
+}
+
+/* Footer copyright styles */
+.footer .copyright {
+    margin-top: 50px; /* Space above copyright */
+    text-align: center; /* Center alignment */
+    font-size: 16px; /* Font size for copyright */
 }
